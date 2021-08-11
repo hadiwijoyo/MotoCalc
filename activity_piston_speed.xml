@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:label="@string/piston_speed_calc"
+    tools:context=".PistonSpeedActivity">
+
+    <ImageView
+        android:id="@+id/bgmotocalc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/backgroundmc"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edstrokeps"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/input_stroke_in_mm"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgmotocalc" />
+
+    <EditText
+        android:id="@+id/edrpm"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/input_engine_rpm"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bgmotocalc"
+        app:layout_constraintStart_toStartOf="@+id/bgmotocalc"
+        app:layout_constraintTop_toBottomOf="@+id/edstrokeps" />
+
+    <Button
+        android:id="@+id/countps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edrpm" />
+
+    <TextView
+        android:id="@+id/edpistonspeed"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="@string/results_in_m_s"
+        android:importantForAutofill="no"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countps" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
